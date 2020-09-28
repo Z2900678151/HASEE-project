@@ -1,0 +1,93 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "911586",
+      "name": "导航",
+      "font_class": "sousuoxuanxiang1-copy",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "1893516",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e514",
+      "unicode_decimal": 58644
+    },
+    {
+      "icon_id": "2400009",
+      "name": "账号",
+      "font_class": "zhanghao",
+      "unicode": "e505",
+      "unicode_decimal": 58629
+    },
+    {
+      "icon_id": "2803015",
+      "name": "音乐",
+      "font_class": "music",
+      "unicode": "e50c",
+      "unicode_decimal": 58636
+    },
+    {
+      "icon_id": "2906083",
+      "name": "耳机",
+      "font_class": "kefu",
+      "unicode": "e527",
+      "unicode_decimal": 58663
+    },
+    {
+      "icon_id": "3176702",
+      "name": "日历",
+      "font_class": "rili",
+      "unicode": "e7f5",
+      "unicode_decimal": 59381
+    },
+    {
+      "icon_id": "4812184",
+      "name": "排行榜",
+      "font_class": "paihangbang",
+      "unicode": "e707",
+      "unicode_decimal": 59143
+    },
+    {
+      "icon_id": "5468184",
+      "name": "收音机",
+      "font_class": "shouyinji",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "5929644",
+      "name": "音乐",
+      "font_class": "tiyu",
+      "unicode": "e507",
+      "unicode_decimal": 58631
+    },
+    {
+      "icon_id": "7604533",
+      "name": "麦克风",
+      "font_class": "maikefeng",
+      "unicode": "e555",
+      "unicode_decimal": 58709
+    },
+    {
+      "icon_id": "10452069",
+      "name": "朋友",
+      "font_class": "pengyou",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "12457276",
+      "name": "唱片",
+      "font_class": "changpian",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    }
+  ]
+}
