@@ -2,12 +2,12 @@ define(["parabola","jquery","jquery-cookie"], function(parabola, $) {
    function goods(){
      $(function(){
         shop_num();
-        
+        console.log("goods.js")
          //加载数据
          $.ajax({
             url:"data/super.json",
             success:function(arr){
-                console.log(arr);
+                //console.log(arr);
                 var str = ``;
                 for(var i = 0;i < arr.length;i ++){
                     str += `
@@ -38,7 +38,7 @@ define(["parabola","jquery","jquery-cookie"], function(parabola, $) {
          $.ajax({
             url:"data/beautiful.json",
             success:function(arr){
-                console.log(arr);
+                //console.log(arr);
                 var str = ``;
                 for(var i = 0;i < arr.length;i ++){
                     str += `
@@ -67,10 +67,12 @@ define(["parabola","jquery","jquery-cookie"], function(parabola, $) {
          //添加购物车
          $(".goods ul").on("click",".sc_btn",function(){
              var id = this.id;
+             var money = $(this).parent().siblings(".money").children().children().html();
+             //console.log(money);
              //判断是否是第一次存入
              var first = $.cookie("goods") == null ? true : false;
              if(first){
-                 $.cookie("goods",JSON.stringify([{id:id,num:1}]),{
+                 $.cookie("goods",JSON.stringify([{id:id,num:1,money:money}]),{
                      expires:30
                  })
              }else{
@@ -82,7 +84,7 @@ define(["parabola","jquery","jquery-cookie"], function(parabola, $) {
                         break;
                      }
                  }
-                 same ? cookieArr[i].num ++ : cookieArr.push({id:id,num:1});
+                 same ? cookieArr[i].num ++ : cookieArr.push({id:id,num:1,money:money});
                  $.cookie("goods",JSON.stringify(cookieArr),{
                      expires:30
                  })
@@ -123,7 +125,7 @@ define(["parabola","jquery","jquery-cookie"], function(parabola, $) {
             var cookieStr2 =$.cookie("GOD_OF_WAR");
             var sum1 = 0;
             var sum2 = 0;
-            if(cookieStr1 || cookieStr2){
+            if(cookieStr1 && cookieStr2){
                 var cookieArr1 = JSON.parse(cookieStr1);
                 var cookieArr2 = JSON.parse(cookieStr2);
 

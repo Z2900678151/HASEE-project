@@ -121,8 +121,9 @@ define(["parabola","jquery","jquery-cookie"], function(parabola, $) {
             //判断是否是第一次存入
             var first = $.cookie("GOD_OF_WAR") == null ? true : false;
             if(first){
-                $.cookie("GOD_OF_WAR",JSON.stringify([{id:id,num:1}]),{
+                $.cookie("GOD_OF_WAR",JSON.stringify([{id:id,num:1,money:7099}]),{
                     expires:30
+                
                 })
             }else{
                 var cookieArr = JSON.parse($.cookie("GOD_OF_WAR"));
@@ -171,7 +172,7 @@ define(["parabola","jquery","jquery-cookie"], function(parabola, $) {
             var cookieStr2 =$.cookie("GOD_OF_WAR");
             var sum1 = 0;
             var sum2 = 0;
-            if(cookieStr1 || cookieStr2){
+            if(cookieStr1 && cookieStr2){
                 var cookieArr1 = JSON.parse(cookieStr1);
                 var cookieArr2 = JSON.parse(cookieStr2);
 
