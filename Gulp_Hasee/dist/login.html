@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>注册页面</title><link rel="stylesheet" href="css/login.min.css"><script>window.onload = function(){
+
+            console.log(textCode(6));
+            var login_text_code = document.querySelector(".login_text_code");
+            login_text_code.innerHTML = textCode(6);
+            
+            function textCode(n){
+                var arr = [];
+                for(var i = 0;i < n; i ++){
+                    var num = parseInt(Math.random() * 123);
+                    if(num >= 0 && num <= 9){
+                        arr.push(num);
+                    }else if(num >= 97 && num <= 122 || num > 65 && num <= 90){
+                        arr.push(String.fromCharCode(num));
+                    }else{
+                        i --;
+                    }
+                }
+                return arr.join(" ");
+            }
+            
+        }</script></head><body><div class="login_header"><div class="center"><a href="#"><img src="http://www.hasee.net/images/logo.png" alt=""> </a><span></span> <i>欢迎注册</i></div></div><div class="main"><div class="login_information"><ul><li><i>用户名：</i><article></article><input type="text" placeholder="请输入您的手机号"><aside>*请用手机号注册</aside></li><li><i>请设置密码：</i><article></article><input type="password"><aside>*6-20位字符，建议由字母，数字和符号两种以上组合</aside></li><li><i>请确认密码：</i><article></article><input type="password"><aside>*请再次输入密码</aside></li><li><i>验证码：</i><input type="text"><p class="login_text_code">哈哈哈</p><aside>*请输入验证码</aside></li><li>注册</li></ul></div></div><div class="login_bottom"><div class="center"><ul><li>公司简介</li>|<li>加入我们</li>|<li>练习我们</li><li>All rights reserved &copy; 2015 Hasee 粤ICP备11003995</li></ul></div></div></body></html>

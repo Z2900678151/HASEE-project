@@ -78,6 +78,24 @@ gulp.task("sass", function(){
   .pipe(gulp.dest("dist/css"))
   .pipe(connect.reload());
 })
+gulp.task("sass", function(){
+  return gulp.src("./stylesheet/register.scss")
+  .pipe(sass())
+  .pipe(gulp.dest("dist/css"))
+  .pipe(minifycss())
+  .pipe(rename("register.min.css"))
+  .pipe(gulp.dest("dist/css"))
+  .pipe(connect.reload());
+})
+gulp.task("sass", function(){
+  return gulp.src("./stylesheet/login.scss")
+  .pipe(sass())
+  .pipe(gulp.dest("dist/css"))
+  .pipe(minifycss())
+  .pipe(rename("login.min.css"))
+  .pipe(gulp.dest("dist/css"))
+  .pipe(connect.reload());
+})
 //监听
 gulp.task("watch", function(){
   gulp.watch("*.html", ['copy-html']);
