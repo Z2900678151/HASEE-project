@@ -1,6 +1,6 @@
 <?php
     header("Content-type:text/html;charset=utf-8");
-    var_dump($_POST);
+ //var_dump($_POST);
     //模拟官方的返回，生成对应的内容
     $responseData = array("code" => 0,"msg" => '');
     //将数据取出
